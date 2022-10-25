@@ -15,7 +15,7 @@
   "author": "Artem Maslii <a.masliy@ukr.net>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Tiomasik"
+    "url": "https://github.com/Tiomasik/goit-js-hw-08"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0",
