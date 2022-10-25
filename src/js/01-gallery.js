@@ -3,6 +3,7 @@ import { galleryItems } from './gallery-items';
 // Change code below this line
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
+// import fuctions
 import { onTagsClickList, makeGalaryItem } from './galary-function';
 
 const listGalaryEl = document.querySelector(`.gallery`);
@@ -13,3 +14,4 @@ listGalaryEl.innerHTML = makeGalary;
 let gallery = new SimpleLightbox('.gallery a', { captionDelay: 250, captionsData: `alt`});
 
 listGalaryEl.addEventListener('click', onTagsClickList)
+
