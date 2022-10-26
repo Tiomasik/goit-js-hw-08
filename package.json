@@ -4,7 +4,7 @@
   "description": "Этот проект был создан при помощи Parcel. Для знакомства и настройки дополнительных возможностей [обратись к документации](https://parceljs.org/).",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
   },
   "repository": {
     "type": "git",
