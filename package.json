@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Tiomasik/goit-js-hw-08/issues"
   },
-  "homepage": "https://github.com/Tiomasik/goit-js-hw-08#readme",
+  "homepage": "https://github.com/Tiomasik/goit-js-hw-08/",
   "dependencies": {
     "modern-normalize": "^1.1.0",
     "simplelightbox": "^2.10.4"
