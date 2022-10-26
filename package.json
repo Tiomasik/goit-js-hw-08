@@ -1,22 +1,21 @@
 {
   "name": "goit-js-hw-08",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Этот проект был создан при помощи Parcel. Для знакомства и настройки дополнительных возможностей [обратись к документации](https://parceljs.org/).",
-  "homepage": "https://github.com/Tiomasik",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /parcel-project-template/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Tiomasik/goit-js-hw-08"
+    "url": "git+https://github.com/Tiomasik/goit-js-hw-08.git"
   },
-  "keywords": [],
   "author": "Artem Maslii <a.masliy@ukr.net>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Tiomasik/goit-js-hw-08"
+    "url": "https://github.com/Tiomasik/goit-js-hw-08/issues"
   },
+  "homepage": "https://github.com/Tiomasik/goit-js-hw-08#readme",
   "dependencies": {
     "modern-normalize": "^1.1.0",
     "simplelightbox": "^2.10.4"
