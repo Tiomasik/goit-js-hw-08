@@ -1,3 +1,4 @@
+import throttle from "lodash.throttle";
 
 const refs = {
     formEl: document.querySelector('.feedback-form'),
@@ -11,10 +12,21 @@ let localDates = {
 };
 
 refs.formEl.addEventListener('submit', onSpendForm)
-refs.textEl.addEventListener('input', onSpendTextarea)
-refs.inputEl.addEventListener('input', onSpendInput)
+refs.textEl.addEventListener('input', throttle(onSpendTextarea, 500))
+refs.inputEl.addEventListener('input', throttle(onSpendInput, 500))
 
 onPopulateForm();
+
+function onPopulateForm() {
+    const saveForm = JSON.parse(localStorage.getItem("feedback-form-state"))
+
+    if (saveForm) {
+        refs.inputEl.value = saveForm.email;
+        refs.textEl.value = saveForm.message;
+        localDates.email = saveForm.email;
+        localDates.message = saveForm.message;
+    }
+}
 
 function onSpendForm(evt) {
     console.log(localDates)
@@ -30,26 +42,12 @@ function onSpendForm(evt) {
 }
 
 function onSpendInput(evt) {
-    localDates[`email`] = `${evt.currentTarget.value}`;
+    localDates[`email`] = `${evt.target.value}`;
     localStorage.setItem("feedback-form-state", JSON.stringify(localDates))
 }
 
 function onSpendTextarea(evt) {
-    localDates[`message`] = `${evt.currentTarget.value}`;
+    localDates[`message`] = `${evt.target.value}`;
     localStorage.setItem("feedback-form-state", JSON.stringify(localDates))
-}
-
-function onPopulateForm() {
-    const saveForm = JSON.parse(localStorage.getItem("feedback-form-state"))
-    localDates = {
-        email: '',
-        message: '',
-    };
-    if (saveForm) {
-        refs.inputEl.value = saveForm.email;
-        refs.textEl.value = saveForm.message;
-        localDates.email = saveForm.email;
-        localDates.message = saveForm.message;
-    }
 }
 

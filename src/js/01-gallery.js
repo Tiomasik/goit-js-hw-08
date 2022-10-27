@@ -4,7 +4,7 @@ import { galleryItems } from './gallery-items';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 // import fuctions
-import { onTagsClickList, makeGalaryItem } from './galary-function';
+import { onTagsClickList, makeGalaryItem } from './gallery-function';
 
 const listGalaryEl = document.querySelector(`.gallery`);
 const makeGalary = galleryItems.map(makeGalaryItem).join('')
